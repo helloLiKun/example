@@ -1,0 +1,32 @@
+#开发环境
+spring:
+
+  #thymeleaf模板引擎
+  thymeleaf:
+    cache: false
+#  redis:
+#    host: 192.168.169.200
+#    port: 6378
+#    password: myRedis
+#    database: 3
+#web服务器端口
+server:
+  port: 8000
+myConfig:
+  #主业务库
+#  primary-db:
+#    datasource:
+#      type: com.alibaba.druid.pool.DruidDataSource
+#      driverClassName: oracle.jdbc.driver.OracleDriver
+#      url: jdbc:oracle:thin:@192.168.169.200:1521:orcl
+#      username: fsgadtfj
+#      password: fsgadtfj2017
+#      initialSize: 1
+#      minIdle: 1
+#      maxIdle: 20
+#      maxActive: 20
+#      maxWait: 60000
+#      timeBetweenEvictionRunsMillis: 60000
+#      testWhileIdle: true
+#      poolPreparedStatements: true
+#      maxPoolPreparedStatementPerConnectionSize: 20
