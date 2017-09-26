@@ -6,6 +6,7 @@ package com.jingao.cn.mapping.admin;
  */
 public interface AdminMapping {
     String ADMIN="/admin";
-    String WELCOME=ADMIN+"/welcome";
+    String LOGIN=ADMIN+"/login";
+    String LOGINSUBMIT=ADMIN+"/loginSubmit";
     String REGISTER=ADMIN+"/register";
 }
