@@ -14,14 +14,14 @@
 			connectionURL="jdbc:oracle:thin:@192.168.169.200:1521:orcl" userId="test_"
 			password="123456"/>
 
-		<javaModelGenerator targetPackage="com.jingao.cn.rep.entity"
+		<javaModelGenerator targetPackage="com.jingao.cn.entity.admin"
 							targetProject="src/main/java" />
-		<sqlMapGenerator targetPackage="rep.mapper.xml"
+		<sqlMapGenerator targetPackage="mapperXml.admin"
 						 targetProject="src/main/resources" />
-		<javaClientGenerator targetPackage="com.jingao.cn.rep.mapper"
+		<javaClientGenerator targetPackage="com.jingao.cn.mapper.admin"
 							 targetProject="src/main/java" type="XMLMAPPER" />
 
-		<table tableName="STUDENT" domainObjectName="Student">
+		<table tableName="USERS" domainObjectName="Users">
 
 		</table>
 

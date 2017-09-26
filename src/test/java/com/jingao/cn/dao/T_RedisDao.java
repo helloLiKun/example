@@ -1,5 +1,6 @@
 package com.jingao.cn.dao;
 
+import com.jingao.cn.redis.Redis;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
