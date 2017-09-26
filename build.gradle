@@ -38,8 +38,8 @@ repositories {
 //}
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-jdbc')
 	compile(
+			'org.springframework.boot:spring-boot-starter-jdbc',
 			"org.springframework.boot:spring-boot-starter-undertow",
 			"org.thymeleaf:thymeleaf:3.0.6.RELEASE",
 			"org.thymeleaf:thymeleaf-spring4:3.0.6.RELEASE",

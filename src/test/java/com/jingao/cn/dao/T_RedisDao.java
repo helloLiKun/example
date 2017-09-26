@@ -20,7 +20,7 @@ public class T_RedisDao {
     }
 
     @Autowired
-    RedisDao redisDao;
+    Redis redisDao;
     @Test
     public void testRedis(){
         redisDao.setKey("name","forezp");

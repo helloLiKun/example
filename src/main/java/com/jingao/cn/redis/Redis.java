@@ -1,4 +1,4 @@
-package com.jingao.cn.dao;
+package com.jingao.cn.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * Created by Administrator on 2017/9/25 0025.
  */
 @Repository
-public class RedisDao {
+public class Redis {
     @Autowired
     private StringRedisTemplate template;
 
