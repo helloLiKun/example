@@ -1,7 +1,7 @@
-package com.jingao.cn.mapper.admin;
+package com.jingao.cn.mapper.user;
 
-import com.jingao.cn.entity.admin.Users;
-import com.jingao.cn.entity.admin.UsersExample;
+import com.jingao.cn.entity.user.Users;
+import com.jingao.cn.entity.user.UsersExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

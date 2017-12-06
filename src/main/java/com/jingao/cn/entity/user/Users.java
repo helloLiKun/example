@@ -1,4 +1,4 @@
-package com.jingao.cn.entity.admin;
+package com.jingao.cn.entity.user;
 
 public class Users {
     /**

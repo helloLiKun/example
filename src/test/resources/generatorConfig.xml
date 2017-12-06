@@ -2,7 +2,7 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
 	<classPathEntry location="D:\work\intellij idea2016\IntelliJ IDEA 2016.3.5\ojdbc6-11.2.0.1.0.jar" />
-	<context id="test_" targetRuntime="MyBatis3"
+	<context id="id" targetRuntime="MyBatis3"
 		defaultModelType="flat">
 		<!-- 注释生成器 -->
 		<commentGenerator>
@@ -21,7 +21,7 @@
 		<javaClientGenerator targetPackage="com.jingao.cn.mapper.admin"
 							 targetProject="src/main/java" type="XMLMAPPER" />
 
-		<table tableName="USERS" domainObjectName="Users">
+		<table tableName="PERMISSION_DIC" domainObjectName="PermissionDic">
 
 		</table>
 

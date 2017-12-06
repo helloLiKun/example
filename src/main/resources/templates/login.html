@@ -52,8 +52,8 @@
 <script src="/lib/My97DatePicker/WdatePicker.js"></script>
 <script type="text/javascript" th:src="${'/lib/jquery/jquery.min.js'}"></script>
 <script type="text/javascript" th:src="${urls.getForLookupPath('/lib/bootstrap-3.3.7-dist/js/bootstrap.js')}"></script>
-<script type="text/javascript" th:src="${urls.getForLookupPath('/lib/vue1/vue.min.js')}"></script>
-<!--<script type="text/javascript" th:src="${urls.getForLookupPath('/lib/vue2/vue.min.js')}"></script>-->
+<!--<script type="text/javascript" th:src="${urls.getForLookupPath('/lib/vue1/vue.min.js')}"></script>-->
+<script type="text/javascript" th:src="${urls.getForLookupPath('/lib/vue2/vue.min.js')}"></script>
 <script type="text/javascript" th:src="${urls.getForLookupPath('/lib/js/lodash.min.js')}"></script>
 <script type="text/javascript" th:src="${urls.getForLookupPath('/lib/layer/layer.js')}"></script>
 <script type="text/javascript" th:src="${urls.getForLookupPath('/lib/laypage/laypage.js')}"></script>
@@ -69,17 +69,28 @@
         methods:{
 
         },
+        mounted: function () {
+            alert(1)
 
-
+        },
+        created:function () {
+            alert(2)
+            this.$nextTick(function () {
+                alert($('#usermsgJSON').val())
+                var user=JSON.parse($('#usermsgJSON').val());
+                vm.users=user;
+                alert(vm.users.name+":"+vm.users.pwd);
+            })
+        }
 
         })
 
-        vm.$nextTick(function () {
-            alert($('#usermsgJSON').val())
-            var user=JSON.parse($('#usermsgJSON').val());
-            vm.users=user;
-            alert(vm.users.name+":"+vm.users.pwd);
-        })
+//        vm.$nextTick(function () {
+//            alert($('#usermsgJSON').val())
+//            var user=JSON.parse($('#usermsgJSON').val());
+//            vm.users=user;
+//            alert(vm.users.name+":"+vm.users.pwd);
+//        })
 
 
     $('#data-form').submit(function() {

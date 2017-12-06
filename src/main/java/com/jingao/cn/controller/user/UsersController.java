@@ -1,8 +1,8 @@
-package com.jingao.cn.controller.admin;
+package com.jingao.cn.controller.user;
 
 import com.alibaba.fastjson.JSON;
-import com.jingao.cn.entity.admin.Users;
-import com.jingao.cn.mapping.admin.AdminMapping;
+import com.jingao.cn.entity.user.Users;
+import com.jingao.cn.mapping.user.UserMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by Administrator on 2017/9/26 0026.
  */
 @Controller
-public class UsersController implements AdminMapping{
+public class UsersController implements UserMapping {
     @RequestMapping(LOGIN)
     public String welcome(ModelMap modelMap){
         Users users=new Users();
@@ -19,12 +19,12 @@ public class UsersController implements AdminMapping{
         users.setPwd("123");
         modelMap.put("usermsgJSON", JSON.toJSONStringWithDateFormat(users,"yyyy-MM-dd"));
         modelMap.put("loginSubmitUrlJSON",LOGINSUBMIT);
-        return "/admin/login";
+        return "login";
     }
 
     @RequestMapping(LOGINSUBMIT)
     public String login(){
-        return "/admin/main";
+        return "main";
     }
 
     @RequestMapping(REGISTER)
