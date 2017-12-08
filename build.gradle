@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '1.5.7.RELEASE'
+		springBootVersion = '1.5.9.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -25,21 +25,29 @@ sourceCompatibility = 1.8
 repositories {
 	mavenCentral()
 	maven {
+		url "http://192.168.169.200:9081/repository/aliyun-maven/"
+		artifactUrls "http://192.168.169.200:9081/repository/maven-releases/"
+
+	}
+	maven {
 		url "http://maven.aliyun.com/nexus/content/groups/public/"
 	}
 	maven {
 //        url "http://repository.pentaho.org/artifactory/repo/"
 		url "http://nexus.pentaho.org/content/groups/omni/"
 	}
+
 }
 
-//configurations {
-//	providedRuntime
-//}
+configurations {
+	compile.exclude([module:'spring-boot-starter-tomcat'])
+}
 
 dependencies {
+	testCompile(
+			"org.springframework.boot:spring-boot-starter-test"
+	)
 	compile(
-			'org.springframework.boot:spring-boot-starter-jdbc',
 			"org.springframework.boot:spring-boot-starter-undertow",
 			"org.thymeleaf:thymeleaf:3.0.6.RELEASE",
 			"org.thymeleaf:thymeleaf-spring4:3.0.6.RELEASE",
@@ -59,13 +67,20 @@ dependencies {
 			"pentaho-kettle:kettle-core:7.1.0.0-12",
 			"pentaho-kettle:kettle-dbdialog:7.1.0.0-12",
 			"pentaho-kettle:kettle-engine:7.1.0.0-12",
-			"pentaho-kettle:kettle-ui-swt:7.1.0.0-12",
+			/*    "pentaho-kettle:kettle-ui-swt:7.1.0.0-12",*/
 			"pentaho-kettle:kettle5-log4j-plugin:7.1.0.0-12",
 			"pentaho-kettle:kettle-jdbc:5.0.0",
 			"org.apache.poi:poi-ooxml:3.17-beta1",
 			"org.apache.poi:poi-ooxml-schemas:3.16",
-	)
+			"org.springframework.data:spring-data-solr",
+			"org.springframework.boot:spring-boot-starter-freemarker:2.0.0.M3",
+			"org.springframework.boot:spring-boot-starter-aop:2.0.0.M2",
+			"org.jeecg:easypoi-base:2.4.0",
+			"org.jeecg:easypoi-annotation:2.1.4",
+//			"oracle:ojdbc6:11.2.0.1.0",
+			'com.oracle:ojdbc14:10.2.0.4.0',
 
-	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+			"org.codehaus.janino:janino:2.5.16"
+
+	)
 }

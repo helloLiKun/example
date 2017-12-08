@@ -3,20 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>zTree</title>
-    <link rel="stylesheet" href="../css/zTreeStyle/zTreeStyle.css"
+    <link rel="stylesheet" href="/lib/ztree/css/zTreeStyle/zTreeStyle.css"
           type="text/css">
 </head>
 <body>
+<div id="menuTree"
+     style="width: 200px; border: 1px solid #f6a828; float: left;">
+    <ul id="tree" class="ztree" style="width: 260px; overflow: auto;"></ul>
+</div>
 
 
 
-<script src="../js/jquery-ui-1.11.4/jquery.js"></script>
-<script type="text/javascript"
-        src="../js/ztree/jquery.ztree.core-3.5.js"></script>
-<script type="text/javascript"
-        src="../js/ztree/jquery.ztree.excheck-3.5.js"></script>
-<script type="text/javascript"
-        src="../js/ztree/jquery.ztree.exedit-3.5.js"></script>
-<script type="text/javascript" src="../js/interface/interfaceManager.js"></script>
+<script src="/lib/ztree/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="/lib/ztree/js/jquery.ztree.core.js"></script>
+<script type="text/javascript" src="/lib/ztree/js/jquery.ztree.excheck.js"></script>
+<script type="text/javascript" src="/lib/ztree/js/jquery.ztree.exedit.js"></script>
+
+<script>
+    $(document).ready(function() {
+        var setting = {
+            async : {
+                enable : true,//是否异步加载
+                url : '/main/initZtree',//加载数据的url
+                data : {
+                    simpleData : {
+                        enable : true,
+                        idKey : "id",
+                        pIdKey : "pid",
+                        rootPId : '0'
+                    }
+                },
+                autoParam : [ "pid"],//异步发送请求时,表示自动传指定属性的参数值
+                dataFilter : function(treeId, parentNode, childNodes) {//这里由于本人设置的节点属性跟zTree不一致所以进行了过滤
+                    if (!childNodes)
+                        return null;
+                    for (var i = 0, l = childNodes.length; i < l; i++) {
+                        childNodes[i].count = childNodes[i].childrenCount;
+                        if (childNodes[i].count && parseInt(childNodes[i].count) > 0) {
+                            //当主节点  下面还有父节点时自动将isParent=true
+                            //这样点击父节点zTree会自动再加载其子节点的数据
+                            childNodes[i].isParent = true;
+                        }
+                        childNodes[i].type = header_type;
+                    }
+                    return childNodes;
+                }
+            },
+            callback : {
+                beforeClick : beforeClick
+            }
+        };
+        function beforeClick(treeNode) {// 表示若没有子节点父节点不再加载
+            if (!treeNode.parent) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+
+//    初始化zTree
+        $.fn.zTree.init($("#tree"), setting,[{
+            'id' : '0',
+            "name" : '凯顿儿童美语ERP信息系统',
+            'type' : 1,
+            'isParent' : true,
+            'pid' : 1
+        }]);
+
+
+    });
+
+
+</script>
 </body>
 </html>

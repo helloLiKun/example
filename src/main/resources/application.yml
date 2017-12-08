@@ -4,6 +4,14 @@ spring:
   #数据源
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@192.168.169.200:1521:orcl
+    username: test_
+    password: 123456
+    initialSize: 1
+    minIdle: 1
+    maxIdle: 20
+    maxActive: 20
     maxWait: 60000
     timeBetweenEvictionRunsMillis: 60000
     testWhileIdle: true
@@ -36,9 +44,9 @@ spring:
     store-type: redis
 
 #mybatis
-#mybatis:
-#  mapper-locations: classpath*:fslpdcmp/**/mapper/*.xml
-#  type-aliases-package: fslpdcmp.**.entity
+mybatis:
+  mapper-locations: classpath*:example/**/*.xml
+  type-aliases-package: example.**.entity
 #mybatis分页插件
 pagehelper:
   helper-dialect: oracle
@@ -46,3 +54,4 @@ pagehelper:
   row-bounds-with-count: true
 #logging:
 #  file: ./logs/app_log.log
+#C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\oracle\ojdbc6\11.2.0.1.0\931e21640909a205ccf5bc026738965570bb085f\ojdbc6-11.2.0.1.0.jar

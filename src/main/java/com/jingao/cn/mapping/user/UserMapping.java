@@ -1,12 +1,12 @@
 package com.jingao.cn.mapping.user;
 
+import com.jingao.cn.mapping.BaseMapping;
 
 /**
- * Created by Administrator on 2017/9/26 0026.
+ * Created by liKun on 2017/12/7 0007.
  */
-public interface UserMapping {
-    String ADMIN="/admin";
-    String LOGIN=ADMIN+"/login";
-    String LOGINSUBMIT=ADMIN+"/loginSubmit";
-    String REGISTER=ADMIN+"/register";
+public interface UserMapping extends BaseMapping{
+    String LOGIN="/login";
+    String LOGINSUBMIT="/loginSubmit";
+    String REGISTER="/register";
 }
