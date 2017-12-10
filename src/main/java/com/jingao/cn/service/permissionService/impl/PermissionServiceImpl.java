@@ -1,8 +1,8 @@
 package com.jingao.cn.service.permissionService.impl;
 
-import com.jingao.cn.entity.permission.PermissionDic;
-import com.jingao.cn.entity.permission.PermissionDicExample;
-import com.jingao.cn.mapper.permission.PermissionDicMapper;
+import com.jingao.cn.entity.permission.PermissionTree;
+import com.jingao.cn.entity.permission.PermissionTreeExample;
+import com.jingao.cn.mapper.permission.PermissionTreeMapper;
 import com.jingao.cn.service.permissionService.PermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,16 +13,18 @@ import java.util.List;
  * Created by liKun on 2017/12/7 0007.
  */
 @Service
-public class PermissionServiceImpl  implements PermissionService{
+public class PermissionServiceImpl  implements PermissionService {
     @Override
-    public List<PermissionDic> getPermissionDics(String pid) {
-        PermissionDicExample permissionDicExample=new PermissionDicExample();
-        PermissionDicExample.Criteria c=permissionDicExample.createCriteria();
+    public List<PermissionTree> getPermissionDics(String pid) {
+        PermissionTreeExample permissionTreeExample=new PermissionTreeExample();
+        PermissionTreeExample.Criteria c=permissionTreeExample.createCriteria();
         c.andPidEqualTo(pid);
-        return permissionDicMapper.selectByExample(permissionDicExample);
+        return permissionTreeMapper.selectByExample(permissionTreeExample);
     }
 
 
+
     @Autowired
-    PermissionDicMapper permissionDicMapper;
+    PermissionTreeMapper permissionTreeMapper;
+
 }

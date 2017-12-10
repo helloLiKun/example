@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
-	<classPathEntry location="D:\work\intellij idea2016\IntelliJ IDEA 2016.3.5\ojdbc6-11.2.0.1.0.jar" />
+	<classPathEntry location="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.oracle\ojdbc6\11.2.0.3\de96f0060c7353532f4cb4a0b73d20545580fc91\ojdbc6-11.2.0.3.jar" />
 	<context id="id" targetRuntime="MyBatis3"
 		defaultModelType="flat">
 		<!-- 注释生成器 -->
@@ -11,8 +11,7 @@
 		</commentGenerator>
 
 		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
-			connectionURL="jdbc:oracle:thin:@192.168.169.200:1521:orcl" userId="test_"
-			password="123456"/>
+			connectionURL="jdbc:oracle:thin:@localhost:1521:orcl" userId="likun" password="123456"/>
 
 		<javaModelGenerator targetPackage="com.jingao.cn.entity.permission"
 							targetProject="src/main/java" />
@@ -21,7 +20,7 @@
 		<javaClientGenerator targetPackage="com.jingao.cn.mapper.permission"
 							 targetProject="src/main/java" type="XMLMAPPER" />
 
-		<table tableName="PERMISSION_DIC" domainObjectName="PermissionDic">
+		<table tableName="T_PERMISSION_TREE" domainObjectName="PermissionTree">
 
 		</table>
 

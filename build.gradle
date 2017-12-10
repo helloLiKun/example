@@ -23,12 +23,13 @@ sourceCompatibility = 1.8
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 repositories {
+	mavenLocal()
 	mavenCentral()
-	maven {
-		url "http://192.168.169.200:9081/repository/aliyun-maven/"
-		artifactUrls "http://192.168.169.200:9081/repository/maven-releases/"
-
-	}
+//	maven {
+//		url "http://192.168.169.200:9081/repository/aliyun-maven/"
+//		artifactUrls "http://192.168.169.200:9081/repository/maven-releases/"
+//
+//	}
 	maven {
 		url "http://maven.aliyun.com/nexus/content/groups/public/"
 	}
@@ -36,6 +37,20 @@ repositories {
 //        url "http://repository.pentaho.org/artifactory/repo/"
 		url "http://nexus.pentaho.org/content/groups/omni/"
 	}
+
+	maven {
+		url "http://mvnrepository.com/"
+	}
+
+	maven {
+		url "http://search.maven.org/"
+	}
+
+	maven {
+		url "http://repository.sonatype.org/content/groups/public/"
+	}
+
+
 
 }
 
@@ -77,10 +92,12 @@ dependencies {
 			"org.springframework.boot:spring-boot-starter-aop:2.0.0.M2",
 			"org.jeecg:easypoi-base:2.4.0",
 			"org.jeecg:easypoi-annotation:2.1.4",
-//			"oracle:ojdbc6:11.2.0.1.0",
-			'com.oracle:ojdbc14:10.2.0.4.0',
+//			'com.oracle:ojdbc14:10.2.0.4.0',`
+			'com.oracle:ojdbc6:11.2.0.3',
+//			'com.oracle:classes12:10.2.0.2.0',
 
 			"org.codehaus.janino:janino:2.5.16"
 
 	)
 }
+
