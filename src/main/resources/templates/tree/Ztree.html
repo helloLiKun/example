@@ -1,80 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>zTree</title>
     <link rel="stylesheet" href="/lib/ztree/css/zTreeStyle/zTreeStyle.css"
           type="text/css">
 </head>
-<body>
-<div id="menuTree"
-     style="width: 200px; border: 1px solid #f6a828; float: left;">
+<body id="vm-id">
+<div id="menuTree" style="width: 200px; border: 1px solid #f6a828; float: left;">
     <ul id="tree" class="ztree" style="width: 260px; overflow: auto;"></ul>
 </div>
 
+<input type="hidden" v-model="initPermissionJSON" th:value="${initPermissionJSON}">
+<input type="hidden" v-model="getTreeURL" th:value="${getTreeURL}">
 
-
-<script src="/lib/ztree/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" th:src="${urls.getForLookupPath('/lib/jquery/jquery.min.js')}"></script>
+<script type="text/javascript"
+        th:src="${urls.getForLookupPath('/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js')}"></script>
+<script type="text/javascript" th:src="${urls.getForLookupPath('/lib/jquery/metisMenu.js')}"></script>
+<script type="text/javascript" th:src="${urls.getForLookupPath('/lib/layer/layer.js')}"></script>
+<script type="text/javascript" th:src="${urls.getForLookupPath('/lib/laypage/laypage.js')}"></script>
+<script type="text/javascript" th:src="${urls.getForLookupPath('/lib/vue1/vue.min.js')}"></script>
+<!--<script src="/lib/ztree/js/jquery-1.4.4.min.js"></script>-->
 <script type="text/javascript" src="/lib/ztree/js/jquery.ztree.core.js"></script>
 <script type="text/javascript" src="/lib/ztree/js/jquery.ztree.excheck.js"></script>
 <script type="text/javascript" src="/lib/ztree/js/jquery.ztree.exedit.js"></script>
 
+
+</body>
 <script>
-    $(document).ready(function() {
-        var setting = {
-            async : {
-                enable : true,//是否异步加载
-                url : '/main/initZtree',//加载数据的url
-                data : {
-                    simpleData : {
-                        enable : true,
-                        idKey : "id",
-                        pIdKey : "pid",
-                        rootPId : '0'
-                    }
+    (function () {
+        var vm;
+        $(function () {
+            vm = new Vue({
+                el: '#vm-id',
+                data: {
+                    listData: [],
+                    total: 0,
+                    checkOne: ''
                 },
-                autoParam : [ "pid"],//异步发送请求时,表示自动传指定属性的参数值
-                dataFilter : function(treeId, parentNode, childNodes) {//这里由于本人设置的节点属性跟zTree不一致所以进行了过滤
-                    if (!childNodes)
-                        return null;
-                    for (var i = 0, l = childNodes.length; i < l; i++) {
-                        childNodes[i].count = childNodes[i].childrenCount;
-                        if (childNodes[i].count && parseInt(childNodes[i].count) > 0) {
-                            //当主节点  下面还有父节点时自动将isParent=true
-                            //这样点击父节点zTree会自动再加载其子节点的数据
-                            childNodes[i].isParent = true;
-                        }
-                        childNodes[i].type = header_type;
-                    }
-                    return childNodes;
+                methods: {}
+
+            });
+            vm.$nextTick(function () {
+                var data=JSON.parse(vm.initPermissionJSON);
+                if(data!=null && data.length>0){
+                    data.forEach(function (d) {
+                        d.isParent=true;
+                    })
                 }
-            },
-            callback : {
-                beforeClick : beforeClick
-            }
-        };
-        function beforeClick(treeNode) {// 表示若没有子节点父节点不再加载
-            if (!treeNode.parent) {
-                return false;
-            } else {
+                //    初始化zTree
+                $.fn.zTree.init($("#tree"), setting,data);
+                $('#vm-id').show();
+
+            });
+            var setting = {
+                async: {
+                    enable: true,//是否异步加载
+                    url: vm.getTreeURL,//加载数据的url
+                    data: {
+                        key: {
+                            checked: "isChecked"
+                        },
+                        simpleData: {
+                            enable: true,
+                            idKey: "id",
+                            pIdKey: "pid",
+                            rootPId: '0'
+                        }
+                    },
+                    autoParam: ["id"],//异步发送请求时,表示自动传指定属性的参数值
+//                    dataFilter: function (treeId, parentNode, childNodes) {//这里由于本人设置的节点属性跟zTree不一致所以进行了过滤
+//                        if (!childNodes)
+//                            return null;
+//                        for (var i = 0, l = childNodes.length; i < l; i++) {
+//                            childNodes[i].count = childNodes[i].childrenCount;
+//                            if (childNodes[i].count && parseInt(childNodes[i].count) > 0) {
+//                                //当主节点  下面还有父节点时自动将isParent=true
+//                                //这样点击父节点zTree会自动再加载其子节点的数据
+//                                childNodes[i].isParent = true;
+//                            }
+//                            childNodes[i].isOption=true;
+////                            childNodes[i].type = header_type;
+//                        }
+//                        return childNodes;
+//                    }
+                },
+                callback: {
+                    beforeAsync:beforeAsync,
+                    beforeCheck:beforeCheck,
+                    beforeClick:beforeClick,
+                    beforeCollapse:beforeCollapse,
+                    beforeDblClick:beforeDblClick,
+                },
+
+                check: {
+                    enable: true,
+//                    autoCheckTrigger: true,
+                    chkStyle: "checkbox",
+                    chkboxType: { "Y": "ps", "N": "ps" }
+                }
+            };
+
+            function beforeAsync (treeId,treeNode) {
                 return true;
             }
-        }
+            function beforeCheck(treeId,treeNode) {
+//                if (!treeNode.isParent) {
+//                    return false;
+//                } else {
+//                    return true;
+//                }
+                return true;
+            }
+            function beforeClick(treeId,treeNode,clickFlag){
+                alert(treeId+'----------'+JSON.stringify(treeNode)+'-----------'+clickFlag)
+            }
+            function beforeCollapse(treeId,treeNode) {
+                return true;
+            }
+            //双击ztree页面之前触发
+            function beforeDblClick(treeId,treeNode) {
+                return false;
+            }
 
 
-//    初始化zTree
-        $.fn.zTree.init($("#tree"), setting,[{
-            'id' : '0',
-            "name" : '凯顿儿童美语ERP信息系统',
-            'type' : 1,
-            'isParent' : true,
-            'pid' : 1
-        }]);
-
-
-    });
-
+        });
+    })();
 
 </script>
-</body>
 </html>

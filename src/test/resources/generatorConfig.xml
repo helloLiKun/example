@@ -15,7 +15,7 @@
 
 		<javaModelGenerator targetPackage="com.jingao.cn.entity.permission"
 							targetProject="src/main/java" />
-		<sqlMapGenerator targetPackage="mapperXml.permission"
+		<sqlMapGenerator targetPackage="mapper.permission"
 						 targetProject="src/main/resources" />
 		<javaClientGenerator targetPackage="com.jingao.cn.mapper.permission"
 							 targetProject="src/main/java" type="XMLMAPPER" />

@@ -8,5 +8,5 @@ import java.util.List;
  * Created by liKun on 2017/12/7 0007.
  */
 public interface PermissionService {
-    public List<PermissionTree> getPermissionDics(String pid);
+    public List<PermissionTree> getPermissionTree(String pid);
 }

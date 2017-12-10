@@ -15,11 +15,12 @@ import java.util.List;
 @Service
 public class PermissionServiceImpl  implements PermissionService {
     @Override
-    public List<PermissionTree> getPermissionDics(String pid) {
+    public List<PermissionTree> getPermissionTree(String pid) {
         PermissionTreeExample permissionTreeExample=new PermissionTreeExample();
         PermissionTreeExample.Criteria c=permissionTreeExample.createCriteria();
         c.andPidEqualTo(pid);
-        return permissionTreeMapper.selectByExample(permissionTreeExample);
+        List<PermissionTree> permissionTrees=permissionTreeMapper.selectByExample(permissionTreeExample);
+        return permissionTrees;
     }
 
 

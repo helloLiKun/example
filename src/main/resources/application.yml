@@ -45,8 +45,8 @@ spring:
 
 #mybatis
 mybatis:
-  mapper-locations: classpath*:example/**/*.xml
-  type-aliases-package: example.**.entity
+  mapper-locations: classpath*:mapper/**/*.xml
+#  type-aliases-package: exampleProjectRepository.**.entity
 #mybatis分页插件
 pagehelper:
   helper-dialect: oracle
@@ -54,4 +54,3 @@ pagehelper:
   row-bounds-with-count: true
 #logging:
 #  file: ./logs/app_log.log
-#C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\oracle\ojdbc6\11.2.0.1.0\931e21640909a205ccf5bc026738965570bb085f\ojdbc6-11.2.0.1.0.jar
