@@ -1,7 +1,7 @@
 #开发环境
 spring:
   datasource:
-    url: jdbc:oracle:thin:@192.168.169.200:1521:orcl
+    url: jdbc:oracle:thin:@localhost:1521:orcl
     username: K_TEST
     password: K_TEST_9
     initialSize: 1
@@ -25,24 +25,7 @@ spring:
 #web服务器端口
 server:
   port: 8809
-myConfig:
-  #主业务库
-  primary-db:
-    datasource:
-      type: com.alibaba.druid.pool.DruidDataSource
-      driverClassName: oracle.jdbc.driver.OracleDriver
-      url: jdbc:oracle:thin:@192.168.169.200:1521:orcl
-      username: K_TEST
-      password: K_TEST_9
-      initialSize: 1
-      minIdle: 1
-      maxIdle: 20
-      maxActive: 20
-      maxWait: 60000
-      timeBetweenEvictionRunsMillis: 60000
-      testWhileIdle: true
-      poolPreparedStatements: true
-      maxPoolPreparedStatementPerConnectionSize: 20
+
 
 
 
