@@ -1,8 +1,0 @@
-#开发环境
-spring:
-  #thymeleaf模板引擎
-  thymeleaf:
-    cache: false
-#web服务器端口
-server:
-  port: 8089
