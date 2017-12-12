@@ -5,6 +5,8 @@
     <title>zTree</title>
     <link rel="stylesheet" href="/lib/ztree/css/zTreeStyle/zTreeStyle.css"
           type="text/css">
+    <style>
+    </style>
 </head>
 <body id="vm-id">
 <div id="menuTree" style="width: 200px; border: 1px solid #f6a828; float: left;">
@@ -47,6 +49,7 @@
                 if(data!=null && data.length>0){
                     data.forEach(function (d) {
                         d.isParent=true;
+//                        d.icon="/img/suNing.png"
                     })
                 }
                 //    初始化zTree
@@ -86,12 +89,17 @@
 //                        return childNodes;
 //                    }
                 },
+                edit: {
+                    enable: true
+                },
                 callback: {
                     beforeAsync:beforeAsync,
                     beforeCheck:beforeCheck,
                     beforeClick:beforeClick,
                     beforeCollapse:beforeCollapse,
                     beforeDblClick:beforeDblClick,
+                    beforeDrag: zTreeBeforeDrag,
+                    onNodeCreated: zTreeOnNodeCreated
                 },
 
                 check: {
@@ -123,6 +131,10 @@
             function beforeDblClick(treeId,treeNode) {
                 return false;
             }
+            function zTreeBeforeDrag(treeId, treeNodes) {
+                return true;
+            };
+
 
 
         });
