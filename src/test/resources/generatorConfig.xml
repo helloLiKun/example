@@ -11,16 +11,16 @@
 		</commentGenerator>
 
 		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
-			connectionURL="jdbc:oracle:thin:@localhost:1521:orcl" userId="likun" password="123456"/>
+			connectionURL="jdbc:oracle:thin:@192.168.169.200:1521:orcl" userId="K_TEST" password="K_TEST_9"/>
 
-		<javaModelGenerator targetPackage="com.jingao.cn.entity.permission"
+		<javaModelGenerator targetPackage="com.jingao.cn.entity.test"
 							targetProject="src/main/java" />
-		<sqlMapGenerator targetPackage="mapper.permission"
+		<sqlMapGenerator targetPackage="mapper.test"
 						 targetProject="src/main/resources" />
-		<javaClientGenerator targetPackage="com.jingao.cn.mapper.permission"
+		<javaClientGenerator targetPackage="com.jingao.cn.mapper.test"
 							 targetProject="src/main/java" type="XMLMAPPER" />
 
-		<table tableName="T_PERMISSION_TREE" domainObjectName="PermissionTree">
+		<table tableName="TEST_9_30" domainObjectName="Test">
 
 		</table>
 
