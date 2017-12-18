@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @EnableTransactionManagement
 public class SpringbootGradleIdeaApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootGradleIdeaApplication.class, args);
 	}
 }
+
