@@ -7840,3 +7840,246 @@ Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving temp
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
 	... 57 common frames omitted
 
+2017-12-19 09:43:16.578  INFO 7788 --- [main] c.j.cn.SpringbootGradleIdeaApplication   : Starting SpringbootGradleIdeaApplication on HLJY2G3W4ME069A with PID 7788 (started by Administrator in D:\work\intellij idea2016\workSpace\exampleProjectRepository)
+2017-12-19 09:43:16.598  INFO 7788 --- [main] c.j.cn.SpringbootGradleIdeaApplication   : The following profiles are active: office
+2017-12-19 09:43:17.329  INFO 7788 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@76a2ddf3: startup date [Tue Dec 19 09:43:17 CST 2017]; root of context hierarchy
+2017-12-19 09:43:19.081  INFO 7788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-12-19 09:43:19.141  INFO 7788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-12-19 09:43:19.221  INFO 7788 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.session.RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]]
+2017-12-19 09:43:20.561  INFO 7788 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2017-12-19 09:43:20.581  INFO 7788 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2017-12-19 09:43:20.951  WARN 7788 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2017-12-19 09:43:20.951  WARN 7788 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2017-12-19 09:43:20.991  INFO 7788 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2017-12-19 09:43:20.991  INFO 7788 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3692 ms
+2017-12-19 09:43:21.473  INFO 7788 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-19 09:43:21.485  INFO 7788 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-19 09:43:21.485  INFO 7788 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+2017-12-19 09:43:21.485  INFO 7788 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-19 09:43:21.485  INFO 7788 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-19 09:43:21.485  INFO 7788 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-19 09:43:21.485  INFO 7788 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'resourceUrlEncodingFilter' to: [/*]
+2017-12-19 09:43:23.486  INFO 7788 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@76a2ddf3: startup date [Tue Dec 19 09:43:17 CST 2017]; root of context hierarchy
+2017-12-19 09:43:23.496  INFO 7788 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Detected @ModelAttribute methods in controllerConfig
+2017-12-19 09:43:23.646  INFO 7788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/mail/sendEmail]}" onto public java.lang.String com.jingao.cn.controller.mail.SendEmailController.sendEmail(org.apache.http.HttpResponse)
+2017-12-19 09:43:23.646  INFO 7788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/main/ztree]}" onto public java.lang.String com.jingao.cn.controller.permission.PermissionController.toZtree(org.springframework.ui.ModelMap)
+2017-12-19 09:43:23.646  INFO 7788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/main/initZtree]}" onto public java.lang.String com.jingao.cn.controller.permission.PermissionController.initZtree(java.lang.String)
+2017-12-19 09:43:23.646  INFO 7788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add]}" onto public java.lang.String com.jingao.cn.controller.test.TestController.addData()
+2017-12-19 09:43:23.646  INFO 7788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register]}" onto public java.lang.String com.jingao.cn.controller.user.UsersController.register()
+2017-12-19 09:43:23.646  INFO 7788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login]}" onto public java.lang.String com.jingao.cn.controller.user.UsersController.welcome(org.springframework.ui.ModelMap)
+2017-12-19 09:43:23.646  INFO 7788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loginSubmit]}" onto public java.lang.String com.jingao.cn.controller.user.UsersController.login()
+2017-12-19 09:43:23.646  INFO 7788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-19 09:43:23.646  INFO 7788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-19 09:43:23.736  INFO 7788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-19 09:43:23.736  INFO 7788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-19 09:43:23.806  INFO 7788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-19 09:43:25.341  INFO 7788 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-19 09:43:26.367  INFO 7788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-19 09:43:26.377  INFO 7788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-12-19 09:43:26.387  INFO 7788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-12-19 09:43:26.427  INFO 7788 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-12-19 09:43:26.437  INFO 7788 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2017-12-19 09:43:26.557  INFO 7788 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8809 (http)
+2017-12-19 09:43:26.567  INFO 7788 --- [main] c.j.cn.SpringbootGradleIdeaApplication   : Started SpringbootGradleIdeaApplication in 11.42 seconds (JVM running for 15.166)
+2017-12-19 09:44:01.002  INFO 7788 --- [XNIO-2 task-1] io.undertow.servlet                      : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-19 09:44:01.003  INFO 7788 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-19 09:44:01.042  INFO 7788 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 39 ms
+2017-12-19 09:44:42.316 ERROR 7788 --- [XNIO-2 task-3] org.thymeleaf.TemplateEngine             : [THYMELEAF][XNIO-2 task-3] Exception processing template "": Error resolving template "", template might not exist or might not be accessible by any of the configured Template Resolvers
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template "", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:870) ~[thymeleaf-3.0.6.RELEASE.jar:3.0.6.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.6.RELEASE.jar:3.0.6.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.6.RELEASE.jar:3.0.6.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.6.RELEASE.jar:3.0.6.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.renderFragment(ThymeleafView.java:353) [thymeleaf-spring4-3.0.6.RELEASE.jar:3.0.6.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.render(ThymeleafView.java:191) [thymeleaf-spring4-3.0.6.RELEASE.jar:3.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286) [spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041) [spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984) [spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) [spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) [spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [javax.servlet-api-3.1.0.jar:3.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [javax.servlet-api-3.1.0.jar:3.1.0]
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:85) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:59) [spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) [spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) [spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:167) [spring-session-1.3.1.RELEASE.jar:na]
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:80) [spring-session-1.3.1.RELEASE.jar:na]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) [undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46) [undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60) [undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43) [undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) [undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) [undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:332) [undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830) [undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_111]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+
+2017-12-19 09:44:42.322 ERROR 7788 --- [XNIO-2 task-3] io.undertow.request                      : UT005023: Exception handling request to /mail/sendEmail
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template "", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982) ~[spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) ~[javax.servlet-api-3.1.0.jar:3.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet-api-3.1.0.jar:3.1.0]
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:85) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:59) ~[spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) ~[spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:167) ~[spring-session-1.3.1.RELEASE.jar:na]
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:80) ~[spring-session-1.3.1.RELEASE.jar:na]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46) ~[undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60) ~[undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43) ~[undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81) ~[undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104) [undertow-servlet-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:332) [undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830) [undertow-core-1.4.21.Final.jar:1.4.21.Final]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_111]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template "", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:870) ~[thymeleaf-3.0.6.RELEASE.jar:3.0.6.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.6.RELEASE.jar:3.0.6.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.6.RELEASE.jar:3.0.6.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.6.RELEASE.jar:3.0.6.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.renderFragment(ThymeleafView.java:353) ~[thymeleaf-spring4-3.0.6.RELEASE.jar:3.0.6.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.render(ThymeleafView.java:191) ~[thymeleaf-spring4-3.0.6.RELEASE.jar:3.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286) ~[spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041) ~[spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984) ~[spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	... 57 common frames omitted
+
+2017-12-19 09:52:06.454  INFO 3380 --- [main] com.jingao.cn.mail.TestMail              : Starting TestMail on HLJY2G3W4ME069A with PID 3380 (started by Administrator in D:\work\intellij idea2016\workSpace\exampleProjectRepository)
+2017-12-19 09:52:06.471  INFO 3380 --- [main] com.jingao.cn.mail.TestMail              : The following profiles are active: office
+2017-12-19 09:52:07.257  INFO 3380 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2bdd8394: startup date [Tue Dec 19 09:52:07 CST 2017]; root of context hierarchy
+2017-12-19 09:52:08.986  INFO 3380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-12-19 09:52:09.076  INFO 3380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-12-19 09:52:09.147  INFO 3380 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.session.RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]]
+2017-12-19 09:52:23.340  INFO 3380 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2bdd8394: startup date [Tue Dec 19 09:52:07 CST 2017]; root of context hierarchy
+2017-12-19 09:52:23.362  INFO 3380 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Detected @ModelAttribute methods in controllerConfig
+2017-12-19 09:52:23.874  INFO 3380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/mail/sendEmail]}" onto public java.lang.String com.jingao.cn.controller.mail.SendEmailController.sendEmail(org.apache.http.HttpResponse)
+2017-12-19 09:52:23.875  INFO 3380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/main/ztree]}" onto public java.lang.String com.jingao.cn.controller.permission.PermissionController.toZtree(org.springframework.ui.ModelMap)
+2017-12-19 09:52:23.875  INFO 3380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/main/initZtree]}" onto public java.lang.String com.jingao.cn.controller.permission.PermissionController.initZtree(java.lang.String)
+2017-12-19 09:52:23.876  INFO 3380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add]}" onto public java.lang.String com.jingao.cn.controller.test.TestController.addData()
+2017-12-19 09:52:23.876  INFO 3380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register]}" onto public java.lang.String com.jingao.cn.controller.user.UsersController.register()
+2017-12-19 09:52:23.877  INFO 3380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loginSubmit]}" onto public java.lang.String com.jingao.cn.controller.user.UsersController.login()
+2017-12-19 09:52:23.877  INFO 3380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login]}" onto public java.lang.String com.jingao.cn.controller.user.UsersController.welcome(org.springframework.ui.ModelMap)
+2017-12-19 09:52:23.879  INFO 3380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-19 09:52:23.879  INFO 3380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-19 09:52:24.239  INFO 3380 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-19 09:52:24.240  INFO 3380 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-19 09:52:24.466  INFO 3380 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-19 09:52:33.706  INFO 3380 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-19 09:53:02.345  INFO 3380 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-12-19 09:53:02.390  INFO 3380 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2017-12-19 09:53:02.637  INFO 3380 --- [main] com.jingao.cn.mail.TestMail              : Started TestMail in 56.901 seconds (JVM running for 59.351)
+2017-12-19 09:53:08.422  INFO 3380 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@2bdd8394: startup date [Tue Dec 19 09:52:07 CST 2017]; root of context hierarchy
+2017-12-19 09:53:08.495  INFO 3380 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-12-19 09:55:06.768  INFO 7224 --- [main] com.jingao.cn.mail.TestMail              : Starting TestMail on HLJY2G3W4ME069A with PID 7224 (started by Administrator in D:\work\intellij idea2016\workSpace\exampleProjectRepository)
+2017-12-19 09:55:06.769  INFO 7224 --- [main] com.jingao.cn.mail.TestMail              : The following profiles are active: office
+2017-12-19 09:55:07.546  INFO 7224 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2bdd8394: startup date [Tue Dec 19 09:55:07 CST 2017]; root of context hierarchy
+2017-12-19 09:55:09.131  INFO 7224 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-12-19 09:55:09.183  INFO 7224 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-12-19 09:55:09.244  INFO 7224 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.session.RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]]
+2017-12-19 09:55:12.238  INFO 7224 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2bdd8394: startup date [Tue Dec 19 09:55:07 CST 2017]; root of context hierarchy
+2017-12-19 09:55:12.245  INFO 7224 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Detected @ModelAttribute methods in controllerConfig
+2017-12-19 09:55:12.338  INFO 7224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/mail/sendEmail]}" onto public java.lang.String com.jingao.cn.controller.mail.SendEmailController.sendEmail(org.apache.http.HttpResponse)
+2017-12-19 09:55:12.339  INFO 7224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/main/ztree]}" onto public java.lang.String com.jingao.cn.controller.permission.PermissionController.toZtree(org.springframework.ui.ModelMap)
+2017-12-19 09:55:12.340  INFO 7224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/main/initZtree]}" onto public java.lang.String com.jingao.cn.controller.permission.PermissionController.initZtree(java.lang.String)
+2017-12-19 09:55:12.340  INFO 7224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add]}" onto public java.lang.String com.jingao.cn.controller.test.TestController.addData()
+2017-12-19 09:55:12.341  INFO 7224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register]}" onto public java.lang.String com.jingao.cn.controller.user.UsersController.register()
+2017-12-19 09:55:12.341  INFO 7224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loginSubmit]}" onto public java.lang.String com.jingao.cn.controller.user.UsersController.login()
+2017-12-19 09:55:12.341  INFO 7224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login]}" onto public java.lang.String com.jingao.cn.controller.user.UsersController.welcome(org.springframework.ui.ModelMap)
+2017-12-19 09:55:12.343  INFO 7224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-19 09:55:12.344  INFO 7224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-19 09:55:12.394  INFO 7224 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-19 09:55:12.395  INFO 7224 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-19 09:55:12.453  INFO 7224 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-19 09:55:13.277  INFO 7224 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-19 09:55:13.942  INFO 7224 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-12-19 09:55:13.955  INFO 7224 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2017-12-19 09:55:13.968  INFO 7224 --- [main] com.jingao.cn.mail.TestMail              : Started TestMail in 7.874 seconds (JVM running for 10.508)
+2017-12-19 09:55:14.757  INFO 7224 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@2bdd8394: startup date [Tue Dec 19 09:55:07 CST 2017]; root of context hierarchy
+2017-12-19 09:55:14.758  INFO 7224 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647

@@ -29,14 +29,14 @@ public class SendEmailController implements SendEmailMapping {
         String to = "1281509283@qq.com";
 
         // 假设您是从本地主机发送电子邮件
-        String host = "localhost";
+        String host = "smtp.163.com";
 
         // 获取系统的属性
         Properties properties = System.getProperties();
 
         // 设置邮件服务器
 //        properties.setProperty("mail.smtp.host", host);
-        properties.setProperty("mail.smtp.host","smtp.163.com");
+        properties.setProperty("mail.smtp.host",host);
         // 获取默认的 Session 对象
         Session session = Session.getDefaultInstance(properties);
 

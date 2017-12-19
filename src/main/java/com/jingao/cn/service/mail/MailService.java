@@ -10,5 +10,6 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 
 public interface MailService {
+    void createMail();
     void  sendMail() throws Exception;
 }
