@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class TestController {
     @RequestMapping("/add")
     public String addData(){
-        testService.addData();
         return "";
     }
     @Autowired
