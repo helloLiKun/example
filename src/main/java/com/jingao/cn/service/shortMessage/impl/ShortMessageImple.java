@@ -22,7 +22,7 @@ public class ShortMessageImple implements ShortMessageService {
         HttpClient client = new HttpClient();
         PostMethod post = new PostMethod("http://utf8.api.smschinese.cn");
         post.addRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=utf8");//在头文件中设置转码
-        NameValuePair[] data ={ new NameValuePair("Uid", "lk1392381****"),new NameValuePair("Key", "a2cb2e0c055fa19143db"),new NameValuePair("smsMob","1509988****"),new NameValuePair("smsText","通知：你大yeye喊你吃饭【天鸿科技】")};
+        NameValuePair[] data ={ new NameValuePair("Uid", "lk1392381****"),new NameValuePair("Key", "a2cb2e****43db"),new NameValuePair("smsMob","1509988****"),new NameValuePair("smsText","通知：你大yeye喊你吃饭【天鸿科技】")};
         post.setRequestBody(data);
         client.executeMethod(post);
         Header[] headers = post.getResponseHeaders();
